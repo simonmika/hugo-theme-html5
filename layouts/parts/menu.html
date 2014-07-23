@@ -1,0 +1,11 @@
+<ul>
+	{{ range . }}
+	<li>
+		<a href="{{.Url}}">{{ .Name }}</a>
+		{{ if .HasChildren }}
+		{{ template "theme/parts/menu.html" .Children }}
+		{{ end }}
+	</li>
+	{{end}}
+</ul>
+

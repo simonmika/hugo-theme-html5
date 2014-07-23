@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	{{ template "theme/parts/head.html" . }}
+	<body>
+		{{ template "theme/parts/header.html" . }}
+		{{ template "theme/parts/nav.html" . }}
+		<article>
+			<header>
+				<h1>{{ .Title }}</a></h1>
+			</header>
+			<ul>
+				{{ range .Data.Pages }}
+				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</article>
+	</body>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	{{ template "theme/parts/head.html" . }}
+	<body>
+		{{ template "theme/parts/header.html" . }}
+		{{ template "theme/parts/nav.html" . }}
+		<main>
+			<header>
+				<h1>{{ .Title }}</h1>
+			</header>
+			{{ .TableOfContents }}
+			<article>
+				{{ .Content }}
+			<article>
+		</main>
+		{{ template "theme/parts/footer.html" . }}
+	</body>
+</html>
