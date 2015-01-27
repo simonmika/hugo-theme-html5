@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-	{{ template "theme/parts/head.html" . }}
+	{{ partial "head.html" . }}
 	<body>
-		{{ template "theme/parts/header.html" . }}
-		{{ template "theme/parts/nav.html" . }}
+		{{ partial "header.html" . }}
+		{{ partial "nav.html" . }}
 		<article>
 			<header>
 				<h1>{{ .Title }}</a></h1>

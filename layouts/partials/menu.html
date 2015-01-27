@@ -3,7 +3,7 @@
 	<li>
 		<a href="{{.Url}}">{{ .Name }}</a>
 		{{ if .HasChildren }}
-		{{ template "theme/parts/menu.html" .Children }}
+		{{ partial "menu.html" .Children }}
 		{{ end }}
 	</li>
 	{{end}}
