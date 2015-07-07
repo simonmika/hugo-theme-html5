@@ -1,7 +1,7 @@
 <ul>
 	{{ range . }}
 	<li>
-		<a href="{{.Url}}">{{ .Name }}</a>
+		<a href="{{.URL}}">{{ .Name }}</a>
 		{{ if .HasChildren }}
 		{{ partial "menu.html" .Children }}
 		{{ end }}
