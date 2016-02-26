@@ -1,0 +1,12 @@
+		<article>
+			<header>
+				<h1>{{ .Title }}</h1>
+			</header>
+			{{ .TableOfContents }}
+			<main>
+				{{ .Content }}
+			</main>
+			<footer>
+				<p><span id="footer-copyright">{{ .Params.copyright }}</span><span id="footer-license">{{ .Params.license }}</span></p>
+			</footer>
+		</article>

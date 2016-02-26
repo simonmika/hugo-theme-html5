@@ -4,16 +4,9 @@
 	<body>
 		{{ partial "header.html" . }}
 		{{ partial "nav.html" . }}
-		<article>
-			<header>
-				<h1><a>{{ .Title }}</a></h1>
-			</header>
-			<ul>
-				{{ range .Data.Pages }}
-				<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-				{{ end }}
-			</ul>
-		</article>
+		{{ range .Data.Pages }}
+			{{ partial "article" . }}
+		{{ end }}
 	</body>
 </html>
 
