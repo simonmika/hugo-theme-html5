@@ -4,8 +4,10 @@
 	<body>
 		{{ partial "header.html" . }}
 		{{ partial "nav.html" . }}
-		{{ range .Data.Pages }}
+		{{ range .Data.Pages}}
+			{{ if gt .Weight 0 }}
 			{{ partial "article" . }}
+			{{ end }}
 		{{ end }}
 	</body>
 </html>
