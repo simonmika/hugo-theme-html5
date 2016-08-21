@@ -14,11 +14,12 @@
 {{ if gt .Weight 0 }}
 		<section id="{{ .Title }}">
 			<article>
-{{ partial "article" . }}
+{{ partial "list-article" . }}
 			</article>
 		</section>
 {{ end }}
 {{ end }}
+	</main>
 {{ partial "footer.html" . }}
 {{ partial "foot.html" . }}
 	</body>
