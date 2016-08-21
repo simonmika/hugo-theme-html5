@@ -2,10 +2,16 @@
 <html>
 {{ partial "head.html" . }}
 	<body>
+		<header>
 {{ partial "header.html" . }}
-{{ partial "nav.html" . }}
+		</header>
+		<nav>
+{{ partial "menu.html" .Site.Menus.main }}
+		</nav>
 {{ partial "article" . }}
+		<footer>
 {{ partial "footer.html" . }}
+		</footer>
 {{ partial "foot.html" . }}
 	</body>
 </html>

@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
+	<head>
 {{ partial "head.html" . }}
+	</head>
 	<body>
+		<header>
 {{ partial "header.html" . }}
-{{ partial "nav.html" . }}
+		</header>
+		<nav>
+{{ partial "menu.html" .Site.Menus.main }}
+		</nav>
 {{ range .Data.Pages}}
 {{ if gt .Weight 0 }}
+		<section id="{{ .Title }}">
+			<article>
 {{ partial "article" . }}
+			</article>
+		</section>
 {{ end }}
 {{ end }}
 {{ partial "footer.html" . }}

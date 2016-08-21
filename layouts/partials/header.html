@@ -1,4 +1,10 @@
-<header>
-	<h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-	<p>{{ .Site.Params.description }}</p>
-</header>
+	<h1>
+		<a href="{{ .Site.BaseURL }}">
+			{{ if .Site.Params.Logotype }}
+			<img src="{{ .Site.BaseURL }}{{ .Site.Params.Logotype }}" />
+			{{ else }}
+			{{ .Site.Title }}
+			{{ end }}
+		</a>
+	</h1>
+	{{ with .Site.Params.Description }}<p>{{ . }}</p>{{ end }}
