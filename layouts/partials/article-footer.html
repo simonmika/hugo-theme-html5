@@ -1,0 +1,4 @@
+					<p>
+						{{ with .Params.copyright }}<span id="footer-copyright">{{ . | safeHTML }}</span>{{ end }}
+						{{ with .Params.license }}<span id="footer-license">{{ . | safeHTML }}</span>{{ end }}
+					</p>

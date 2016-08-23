@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head>
-{{ partial "head.html" . }}
-	</head>
-	<body>
-		<header>
-{{ partial "header.html" . }}
-		</header>
-		<nav>
-{{ partial "menu.html" .Site.Menus.main }}
-		</nav>
+{{ define "main" }}
 {{ range .Data.Pages}}
-{{ if gt .Weight 0 }}
-		<section id="{{ .Title }}">
-			<article>
-{{ partial "list-article" . }}
+			<article id="{{ .LinkTitle }}">
+{{ partial "article" (dict "article" . "mode" $.Site.Params.ListMode) }}
 			</article>
-		</section>
 {{ end }}
 {{ end }}
-	</main>
-{{ partial "footer.html" . }}
-{{ partial "foot.html" . }}
-	</body>
-</html>

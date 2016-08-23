@@ -1,5 +1,7 @@
 {{ define "main" }}
-			<article>
+{{ range where .Data.Pages "Section" .Site.Params.FrontPageSection }}
+			<article id="{{ .LinkTitle }}">
 {{ partial "article" (dict "article" . "mode" $.Site.Params.ListMode) }}
 			</article>
+{{ end }}
 {{ end }}

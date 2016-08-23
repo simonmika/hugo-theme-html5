@@ -1,11 +1,21 @@
+{{ with .article }}
 				<header>
-					<h1>{{ .Title }}</h1>
-{{ partial "article-meta.html" }}
+{{ partial "article-header.html" . }}
 				</header>
+{{ if eq $.mode "full" }}
 				{{ .TableOfContents }}
 				<main>
 					{{ .Content }}
 				</main>
 				<footer>
-					<p><span id="footer-copyright">{{ .Params.copyright }}</span><span id="footer-license">{{ .Params.license }}</span></p>
+{{ partial "article-footer.html" . }}
 				</footer>
+{{ else if eq $.mode "summary" }}
+				<main class="#summary">
+					{{ .Summary }}
+				</main>
+{{ if .Truncated }}{{ partial "self-link.html" . }}{{ end }}
+{{ else }}
+{{ partial "self-link.html" . }}
+{{ end }}
+{{ end }}

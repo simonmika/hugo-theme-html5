@@ -6,4 +6,6 @@
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ .Site.BaseURL }}apple-touch-icon-144-precomposed.png">
 		<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico">
 		<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ partial "local-head.html" . }}
+		{{ range .Site.Params.CSS }}
+		<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}"/>{{ end }}
+{{ partial "head-local.html" . }}

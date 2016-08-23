@@ -1,1 +1,1 @@
-		<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+		<title>{{ .Title }}{{ if eq .Title .Site.Title }}{{ else }} &middot; {{ .Site.Title }}{{ end }}</title>

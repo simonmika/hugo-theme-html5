@@ -1,1 +1,1 @@
-	{{ with .Site.Params.Footer | safeHTML }}<p>{{ . }}</p>{{ end }}
+	{{ with .Site.Params.Footer }}<p>{{ . | safeHTML }}</p>{{ end }}
