@@ -1,7 +1,9 @@
 {{ define "main" }}
+		<main class="list index">
 {{ range where .Data.Pages "Section" .Site.Params.FrontPageSection }}
 			<article id="{{ .LinkTitle }}">
 {{ partial "article" (dict "article" . "mode" $.Site.Params.ListMode) }}
 			</article>
 {{ end }}
+		</main>
 {{ end }}

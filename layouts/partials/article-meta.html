@@ -1,1 +1,5 @@
-			<p><time>{{ .Date.Format "2006-01-02" }}</time>&nbsp;&nbsp;{{ .FuzzyWordCount }} words</p>
+			<p>
+				<time>{{ .Date.Format "2006-01-02" }}</time>
+				<span class='article-length'>{{ .FuzzyWordCount }} words</span>
+				<span class='article-reading-time'>{{ .ReadingTime }} minutes</span>
+			</p>
