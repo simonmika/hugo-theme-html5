@@ -1,6 +1,6 @@
 <ul>
 	{{ range . }}
-	<li>
+	<li{{if .HasMenuCurrent "main" . }} class="active"{{end}}>
 		<a href="{{.URL}}">{{ .Name }}</a>
 		{{ if .HasChildren }}
 		{{ partial "menu.html" .Children }}
