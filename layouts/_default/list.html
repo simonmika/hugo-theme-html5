@@ -1,9 +1,10 @@
 {{ define "main" }}
 		<main class="list">
-{{ range .Data.Pages}}
+{{ range .Data.Paginator.Pages}}
 			<article id="{{ .LinkTitle }}">
 {{ partial "article" (dict "article" . "mode" $.Site.Params.ListMode) }}
 			</article>
-		</main>
 {{ end }}
+{{ partial "pagination" . }}
+		</main>
 {{ end }}
