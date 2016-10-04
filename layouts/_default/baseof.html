@@ -5,15 +5,15 @@
 		<header>
 {{ partial "header.html" . }}
 {{ if .Site.Params.NavigationInHeader }}
-		<nav>
-{{ partial "menu.html" .Site.Menus.main }}
+		<nav class="nav-in-header">
+{{ partial "menu.html" (dict "node" . "menu" .Site.Menus.main) }}
 		</nav>
 {{ end }}
 		</header>
 {{ if .Site.Params.NavigationInHeader }}
 {{ else }}
-		<nav>
-{{ partial "menu.html" .Site.Menus.main }}
+		<nav class="nav-after-header">
+{{ partial "menu.html" (dict "node" . "menu" .Site.Menus.main) }}
 		</nav>
 {{ end }}
 {{ block "main" . }}{{ end }}
