@@ -1,8 +1,10 @@
 {{ with .article }}
+{{ if not (eq $.mode "body") }}
 				<header>
 {{ partial "article-header.html" . }}
 				</header>
-{{ if eq $.mode "full" }}
+{{ end }}
+{{ if or (eq $.mode "full") (eq $.mode "body") }}
 				{{ .TableOfContents }}
 				<main>
 					{{ .Content }}
