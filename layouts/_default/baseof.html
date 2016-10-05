@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html{{ with .Site.Params.Prefix }} prefix="{{ range . }}{{ . }} {{ end }}"{{ end }}>
 {{ partial "head.html" . }}
 	<body>
 		<header>
