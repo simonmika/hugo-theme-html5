@@ -1,5 +1,5 @@
 			<p>
-				<time>{{ .Date.Format "2006-01-02" }}</time>
+				{{ if not (eq (.Date.Format "2006-01-02") "0001-01-01") }}<time>{{ .Date.Format "2006-01-02" }}</time>{{ end }}
 				<span class='article-length'>{{ .FuzzyWordCount }} words</span>
 				<span class='article-reading-time'>{{ .ReadingTime }} minutes</span>
 			</p>
