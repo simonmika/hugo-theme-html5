@@ -1,0 +1,38 @@
+form {
+	/* Just to center the form on the page */
+	margin: 0 auto;
+	/* To see the outline of the form */
+	padding: 0;
+}
+label {
+	display: block;
+	margin-bottom: 0.2em;
+}
+input,
+textarea {
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* To harmonize the look & feel of text field border */
+	border: 1px solid #999;
+	border-radius: 0.5em;
+	padding: 0.25em;
+	background-color: rgba(255, 255, 255, 0.6);
+	margin-bottom: 0.6em;
+}
+input:focus, textarea:focus {
+	/* To give a little highlight on active elements */
+	border-color: #000;
+}
+main > article > main input,
+main > article > main textarea {
+	width: calc(100% - 2em);
+}
+nav input[type=email] {
+	float: left;
+	max-width: calc(50% - 1em);
+}
+nav input[type=submit] {
+	float: left;
+	max-width: calc(50% - 1em);
+}

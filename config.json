@@ -1,11 +1,38 @@
 {
-	"BaseURL": "http://hugo-theme-html5.github.io/",
+	"baseurl": "http://hugo-theme-html5.github.io/",
 	"languageCode": "en-US",
-	"title": "Example of HTML5 Theme for Hugo",
+	"title": "HTML5 Hugo Theme Example",
 	"MetaDataFormat": "json",
 	"blackfriday": {
 		"extensions": [
 			"hardLineBreak"
+		]
+	},
+	"theme": "hugo-theme-html5",
+	"params": {
+		"description": "Example of HTML5 Theme for Hugo",
+		"logotype": "img/logotype.svg",
+		"css": [
+			"css/text.css",
+			"css/color.css",
+			"css/layout.css",
+			"css/form.css"
+		],
+		"listmode": "title",
+		"frontpagemode": "title",
+		"frontpagesection": "article",
+		"navigationinheader": true,
+		"prefix": [
+			"og: http://opy.me/ns#"
+		]
+	},
+	"menu": {
+		"main": [
+			{
+				"name": "Articles",
+				"weight": 10,
+				"URL": "/"
+			}
 		]
 	}
 }

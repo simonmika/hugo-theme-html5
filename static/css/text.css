@@ -1,0 +1,54 @@
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Verdana", sans-serif;
+	font-weight: 300;
+	line-height: 140%;
+}
+a {
+	text-decoration: none;
+}
+em {
+	font-style: normal;
+	font-weight: 500;
+}
+body > main > header > p,
+body > main > article > header > p {
+	font-size: 85%;
+}
+body > main > article > main blockquote {
+	font-size: 1.4em;
+}
+body > main > article > main blockquote p {
+	margin: 0.2em 0;
+}
+body > footer > main > article > main h1 {
+	font-size: 0.6em;
+}
+body > footer > nav  li > a,
+body > footer > main > article > header > h1 {
+	font-size: 1em;
+}
+body > footer > main > article > header > p {
+	font-size: 0.75em;
+}
+body > header > nav,
+body > footer > nav {
+	text-transform: lowercase;
+	text-align: center;
+}
+body > main > footer > nav {
+	font-size: 1.2em;
+	text-align: center;
+}
+@media screen and (min-width: 640px) {
+body > header > nav,
+body > footer > nav {
+	text-align: center;
+}
+}
