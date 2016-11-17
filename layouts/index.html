@@ -1,8 +1,8 @@
 {{ define "main" }}
 		<main class="list index">
-{{ range where .Paginator.Pages "Section" .Site.Params.FrontPageSection }}
+{{ range where .Paginator.Pages "Section" .Site.Params.frontpagesection }}
 			<article id="{{ .LinkTitle }}">
-{{ partial "article" (dict "article" . "mode" $.Site.Params.ListMode) }}
+{{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
 			</article>
 {{ end }}
 {{ partial "pagination" . }}

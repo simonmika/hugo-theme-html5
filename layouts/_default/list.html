@@ -2,7 +2,7 @@
 		<main class="list">
 {{ range .Data.Paginator.Pages}}
 			<article id="{{ .LinkTitle }}">
-{{ partial "article" (dict "article" . "mode" $.Site.Params.ListMode) }}
+{{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
 			</article>
 {{ end }}
 {{ partial "pagination" . }}

@@ -4,13 +4,13 @@
 	<body>
 		<header>
 {{ partial "header.html" . }}
-{{ if .Site.Params.NavigationInHeader }}
+{{ if .Site.Params.navigationinheader }}
 		<nav>
 {{ partial "menu.html" .Site.Menus.main }}
 		</nav>
 {{ end }}
 		</header>
-{{ if .Site.Params.NavigationInHeader }}
+{{ if .Site.Params.navigationinheader }}
 {{ else }}
 		<nav>
 {{ partial "menu.html" .Site.Menus.main }}
