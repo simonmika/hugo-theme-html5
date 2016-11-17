@@ -10,3 +10,4 @@ This example contains:
 eme-html5 themes/hugo-theme-html5`.
 5. Added example CSS files.
 6. Configured site configuration to use theme.
+7. Added configuration for Visual Studio Code (pressing Ctrl-Shift-b starts `hugo server`).
