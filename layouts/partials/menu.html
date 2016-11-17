@@ -1,11 +1,12 @@
 <ul>
-	{{ range . }}
-	<li>
+	{{ range $.menu }}
+	<li{{if $.node.HasMenuCurrent "main" . }} class="parent-active"{{end}}{{if $.node.IsMenuCurrent "main" . }} class="active"{{end}}>
+		{{.Pre}}
 		<a href="{{.URL}}">{{ .Name }}</a>
+		{{.Post}}
 		{{ if .HasChildren }}
-		{{ partial "menu.html" .Children }}
+		{{ partial "menu.html" (dict "node" $.node "menu" .Children) }}
 		{{ end }}
 	</li>
 	{{end}}
 </ul>
-
