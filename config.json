@@ -1,5 +1,11 @@
 {
-	"baseurl": "http://example.org/",
-	"languageCode": "en-us",
-	"title": "My New Hugo Site"
+	"BaseURL": "http://hugo-theme-html5.github.io/",
+	"languageCode": "en-US",
+	"title": "Example of HTML5 Theme for Hugo",
+	"MetaDataFormat": "json",
+	"blackfriday": {
+		"extensions": [
+			"hardLineBreak"
+		]
+	}
 }
