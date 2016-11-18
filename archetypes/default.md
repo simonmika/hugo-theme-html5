@@ -1,6 +1,8 @@
----
-draft: true
-menu:
-	main:
-		weight: 100
----
+{
+   "draft": true,
+	 "menu": {
+		 "main": {
+			 "weight": 100
+		 }
+	 }
+}
