@@ -1,7 +1,7 @@
 {{ define "main" }}
-		<main class="list index">
+		<main class="list">
 {{ range where .Paginator.Pages "Section" .Site.Params.frontpagesection }}
-			<article id="{{ .LinkTitle }}">
+			<article id="{{ .LinkTitle | urlize | lower }}">
 {{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
 			</article>
 {{ end }}
