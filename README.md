@@ -30,8 +30,11 @@ And add it to your config under `.params.css`:
 
 #### JSON example:
 
-	"params":
-		"css": ["layout.css", "colors.css"]
+	"params": {
+		...
+		"css": ["layout.css", "colors.css"],
+		...
+	}
 
 ### Add Favicon
 Add your sites favicon here:
