@@ -10,15 +10,28 @@ Clone this repository into your `themes` folder of your site. Issue the followin
 
 	git clone https://github.com/simonmika/hugo-theme-html5 themes/html5
 
-### Add Layout
-Add CSS to layout your site into:
+### Add stylesheets
+Add CSS for your site into the css folder. For example:
 
 	static/css/layout.css
+	static/css/colors.css
 
-### Add Color
-Add CSS to color your site into:
+And add it to your config under `.params.css`:
 
-	static/css/color.css
+TOML example:
+
+	[params]
+		css = ["layout.css", "colors.css"]
+
+YAML example:
+
+	params:
+		css: ["layout.css", "colors.css"]
+
+JSON example:
+
+	"params":
+		"css": ["layout.css", "colors.css"]
 
 ### Add Favicon
 Add your sites favicon here:
