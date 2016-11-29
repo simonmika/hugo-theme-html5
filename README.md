@@ -18,17 +18,17 @@ Add CSS for your site into the css folder. For example:
 
 And add it to your config under `.params.css`:
 
-TOML example:
+#### TOML example:
 
 	[params]
 		css = ["layout.css", "colors.css"]
 
-YAML example:
+#### YAML example:
 
 	params:
 		css: ["layout.css", "colors.css"]
 
-JSON example:
+#### JSON example:
 
 	"params":
 		"css": ["layout.css", "colors.css"]
