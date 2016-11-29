@@ -1,4 +1,7 @@
-# HTML 5 Theme for Hugo
+# HTML 5 Theme for Hugo (dn3s Fork)
+
+This is a fork of [simonmika](https://github.com/simonmika)'s [hugo-theme-html5](https://github.com/simonmika/hugo-theme-html5).
+It's got a bunch of feature branches that I am hoping will be merged upstream. The master branch is simply a combination of all the feature branches.
 
 HTML5 theme for the static site generator [Hugo](http://http://hugo.spf13.com).
 It is not a complete theme but rather a set of templates that generates the necessary HTML. It also contains some sensible CSS reset.
