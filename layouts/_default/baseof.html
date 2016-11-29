@@ -6,14 +6,14 @@
 {{ partial "header.html" . }}
 {{ if .Site.Params.navigationinheader }}
 		<nav>
-{{ partial "menu.html" .Site.Menus.main }}
+{{ partial "menu.html" (dict "node" . "menu" .Site.Menus.main) }}
 		</nav>
 {{ end }}
 		</header>
 {{ if .Site.Params.navigationinheader }}
 {{ else }}
 		<nav>
-{{ partial "menu.html" .Site.Menus.main }}
+{{ partial "menu.html" (dict "node" . "menu" .Site.Menus.main) }}
 		</nav>
 {{ end }}
 {{ block "main" . }}{{ end }}
