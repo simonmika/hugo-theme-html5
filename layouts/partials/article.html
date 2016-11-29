@@ -5,7 +5,8 @@
 				</header>
 {{ end }}
 {{ if or (eq $.mode "full") (eq $.mode "body") }}
-				{{ .TableOfContents }}
+				{{ $globalShowToc := default true (index .Site.Params "toc") }}
+				{{ if default $globalShowToc (index .Params "toc") }}{{ .TableOfContents }}{{ end }}
 				<main>
 					{{ .Content }}
 				</main>
