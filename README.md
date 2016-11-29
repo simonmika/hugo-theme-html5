@@ -21,12 +21,16 @@ And add it to your config under `.params.css`:
 #### TOML example:
 
 	[params]
+		...
 		css = ["layout.css", "colors.css"]
+		...
 
 #### YAML example:
 
 	params:
+		...
 		css: ["layout.css", "colors.css"]
+		...
 
 #### JSON example:
 
