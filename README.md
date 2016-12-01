@@ -16,37 +16,51 @@ Clone this repository into your `themes` folder of your site. Issue the followin
 ### Add stylesheets
 Add CSS for your site into the css folder. For example:
 
-	static/css/layout.css
-	static/css/colors.css
+```
+static/css/layout.css
+static/css/colors.css
+```
 
 And add it to your config under `.params.css`:
 
 #### TOML example:
 
-	[params]
-		...
-		css = ["layout.css", "colors.css"]
-		...
+```
+[params]
+	...
+	css = ["layout.css", "colors.css"]
+	...
+```
 
 #### YAML example:
 
-	params:
-		...
-		css: ["layout.css", "colors.css"]
-		...
+```
+params:
+	...
+	css: ["layout.css", "colors.css"]
+	...
+```
 
 #### JSON example:
 
+```
+{
+	...
 	"params": {
 		...
 		"css": ["layout.css", "colors.css"],
 		...
 	}
+	...
+}
+```
 
 ### Add Favicon
 Add your sites favicon here:
 
+```
 	static/favicon.ico
+```
 
 ### Create Menu
 Add pages to the `main` menu.
