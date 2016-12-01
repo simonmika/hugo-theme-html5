@@ -78,6 +78,11 @@ By default, every article is preceded by a table of contents.
 To diable this globally, set `Params.toc` to `false` in your site config.
 To override the global setting, set `toc` in the front matter of an individual article.
 
+### Word Counts
+
+By default, every article is preceded by a word count and estimated reading time.
+To diable this globally, set `Params.ShowWordCount` to `false` in your site config.
+
 ## Contributing
 
 Please clone this repository and create pull-requests for any features that could have a more general use and that fit within the vision of this theme.
