@@ -33,6 +33,14 @@ Add pages to the `main` menu.
  * Menu with infinitive levels
  * Uses HTML 5 structural elements
 
+## Configuring
+
+### Table Of Contents
+
+By default, every article is preceded by a table of contents.
+To diable this globally, set `Params.toc` to `false` in your site config.
+To override the global setting, set `toc` in the front matter of an individual article.
+
 ## Contributing
 
 Please clone this repository and create pull-requests for any features that could have a more general use and that fit within the vision of this theme.
