@@ -33,6 +33,13 @@ Add pages to the `main` menu.
  * Menu with infinitive levels
  * Uses HTML 5 structural elements
 
+## Configuring
+
+### Word Counts
+
+By default, every article is preceded by a word count and estimated reading time.
+To diable this globally, set `Params.ShowWordCount` to `false` in your site config.
+
 ## Contributing
 
 Please clone this repository and create pull-requests for any features that could have a more general use and that fit within the vision of this theme.
