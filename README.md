@@ -83,7 +83,7 @@ To override the global setting, set `toc` in the front matter of an individual a
 ### Word Counts
 
 By default, every article is preceded by a word count and estimated reading time.
-To diable this globally, set `Params.showWordCount` to `false` in your site config.
+To disable this globally, set `Params.showWordCount` to `false` in your site config.
 
 ## Contributing
 
