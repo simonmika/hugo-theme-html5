@@ -38,7 +38,7 @@ Add pages to the `main` menu.
 ### Word Counts
 
 By default, every article is preceded by a word count and estimated reading time.
-To diable this globally, set `Params.ShowWordCount` to `false` in your site config.
+To diable this globally, set `Params.showWordCount` to `false` in your site config.
 
 ## Contributing
 
