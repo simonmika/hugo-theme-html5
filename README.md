@@ -69,6 +69,12 @@ Add pages to the `main` menu.
 
 ## Configuring
 
+### Table Of Contents
+
+By default, every article is preceded by a table of contents.
+To diable this globally, set `Params.toc` to `false` in your site config.
+To override the global setting, set `toc` in the front matter of an individual article.
+
 ### Word Counts
 
 By default, every article is preceded by a word count and estimated reading time.
