@@ -10,20 +10,54 @@ Clone this repository into your `themes` folder of your site. Issue the followin
 
 	git clone https://github.com/simonmika/hugo-theme-html5 themes/html5
 
-### Add Layout
-Add CSS to layout your site into:
+### Add stylesheets
+Add CSS for your site into the css folder. For example:
 
-	static/css/layout.css
+```
+static/css/layout.css
+static/css/colors.css
+```
 
-### Add Color
-Add CSS to color your site into:
+And add it to your config under `.params.css`:
 
-	static/css/color.css
+#### TOML example:
+
+```
+[params]
+	...
+	css = ["layout.css", "colors.css"]
+	...
+```
+
+#### YAML example:
+
+```
+params:
+	...
+	css: ["layout.css", "colors.css"]
+	...
+```
+
+#### JSON example:
+
+```
+{
+	...
+	"params": {
+		...
+		"css": ["layout.css", "colors.css"],
+		...
+	}
+	...
+}
+```
 
 ### Add Favicon
 Add your sites favicon here:
 
+```
 	static/favicon.ico
+```
 
 ### Create Menu
 Add pages to the `main` menu.
@@ -40,6 +74,11 @@ Add pages to the `main` menu.
 By default, every article is preceded by a table of contents.
 To diable this globally, set `Params.toc` to `false` in your site config.
 To override the global setting, set `toc` in the front matter of an individual article.
+
+### Word Counts
+
+By default, every article is preceded by a word count and estimated reading time.
+To disable this globally, set `Params.showWordCount` to `false` in your site config.
 
 ## Contributing
 
