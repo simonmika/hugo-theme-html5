@@ -1,6 +1,6 @@
 {{ define "main" }}
 		<main class="list">
-{{ range where .Pages "Section" .Site.Params.frontpagesection }}
+{{ range where .Data.Pages "Section" .Site.Params.frontpagesection }}
 			<article id="{{ .LinkTitle | urlize | lower }}">
 {{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
 			</article>
