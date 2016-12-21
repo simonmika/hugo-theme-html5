@@ -8,7 +8,7 @@
 		"-wD",
 		"server"
 	],
-	"showOutput": "silent",
+	"showOutput": "always",
 	"isWatching": true,
 	"problemMatcher": [
 		{
