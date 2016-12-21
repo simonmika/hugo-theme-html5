@@ -7,12 +7,11 @@ body > main {
 	margin: 0 auto;
 	max-width: 34em;
 }
-body > main > article > .self-link,
-body > footer > main > article > .self-link {
+
+body > main > article > .self-link {
 	padding: 0;
 }
-body > main > article > .self-link > a > span,
-body > footer > main > article > .self-link > a > span {
+body > main > article > .self-link > a > span {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -22,8 +21,6 @@ body > footer > main > article > .self-link > a > span {
 	background-image: url('transparent.gif');
 }
 body > main > article > header,
-body > footer > main > article > header,
-body > main > article,
-body > footer > main > article {
+body > main > article {
 	position: relative;
 }
