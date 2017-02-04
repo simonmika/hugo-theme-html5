@@ -1,6 +1,6 @@
 {{ define "main" }}
 		<main class="list">
-{{ range .Data.Paginator.Pages}}
+{{ range .Data.Pages}}
 			<article id="{{ .LinkTitle | urlize | lower }}">
 {{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
 			</article>
