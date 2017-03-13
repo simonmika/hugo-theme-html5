@@ -1,6 +1,6 @@
 {{ define "main" }}
 		<main class="single">
-			<article>
+			<article{{ if isset .Params "class" }} class="{{ .Params.class }}"{{ end }}{{ if isset .Params "style" }} style="{{ .Params.style | safeCSS }}"{{ end }}>
 {{ partial "article" (dict "article" . "mode" "full") }}
 			</article>
 		</main>

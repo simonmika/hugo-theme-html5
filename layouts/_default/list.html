@@ -1,7 +1,7 @@
 {{ define "main" }}
 		<main class="list">
 {{ range .Data.Paginator.Pages}}
-			<article id="{{ .LinkTitle | urlize | lower }}">
+			<article id="{{ .LinkTitle | urlize | lower }}"{{ if isset .Params "class" }} class="{{ .Params.class }}"{{ end }}{{ if isset .Params "style" }} style="{{ .Params.style | safeCSS }}"{{ end }}>
 {{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
 			</article>
 {{ end }}
