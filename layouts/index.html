@@ -2,7 +2,7 @@
 		<main class="list">
 {{ range where .Paginator.Pages "Section" .Site.Params.frontpagesection }}
 			<article id="{{ .LinkTitle | urlize | lower }}">
-{{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
+{{ partial "article" (dict "article" . "mode" $.Site.Params.frontpagemode) }}
 			</article>
 {{ end }}
 {{ partial "pagination" . }}
