@@ -1,9 +1,7 @@
 {{ define "main" }}
 		<main class="list">
 {{ range where .Paginator.Pages "Section" .Site.Params.frontpagesection }}
-			<article id="{{ .LinkTitle | urlize | lower }}"{{ if isset .Params "class" }} class="{{ .Params.class }}"{{ end }}{{ if isset .Params "style" }} style="{{ .Params.style | safeCSS }}"{{ end }}>
 {{ partial "article" (dict "article" . "mode" $.Site.Params.frontpagemode) }}
-			</article>
 {{ end }}
 {{ partial "pagination" . }}
 		</main>

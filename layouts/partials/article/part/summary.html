@@ -1,0 +1,4 @@
+				<main class="#summary">
+					{{ .Summary }}
+				</main>
+{{ if .Truncated }}{{ partial "self-link.html" . }}{{ end }}

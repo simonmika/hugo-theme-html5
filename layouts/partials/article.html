@@ -1,25 +1,4 @@
-{{ with .article }}
-{{ if not (eq $.mode "body") }}
-				<header>
-{{ partial "article-header.html" . }}
-				</header>
-{{ end }}
-{{ if or (eq $.mode "full") (eq $.mode "body") }}
-				{{ if default (default true (index .Site.Params "toc")) (index .Params "toc") }}
-				{{ .TableOfContents }}
-				{{ end }}
-				<main>
-					{{ .Content }}
-				</main>
-				<footer>
-{{ partial "article-footer.html" . }}
-				</footer>
-{{ else if eq $.mode "summary" }}
-				<main class="#summary">
-					{{ .Summary }}
-				</main>
-{{ if .Truncated }}{{ partial "self-link.html" . }}{{ end }}
-{{ else }}
-{{ partial "self-link.html" . }}
-{{ end }}
-{{ end }}
+{{ $path := .mode | printf "article/mode/%s" }}
+			<article id="{{ .article.LinkTitle | urlize | lower }}"{{ if isset .article.Params "class" }} class="{{ .article.Params.class }}"{{ end }}{{ if isset .article.Params "style" }} style="{{ .article.Params.style | safeCSS }}"{{ end }}>
+{{ partial $path .article }}
+			</article>
