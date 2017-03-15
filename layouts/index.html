@@ -1,7 +1,7 @@
 {{ define "main" }}
 		<main class="list">
 {{ range where .Paginator.Pages "Section" .Site.Params.frontpagesection }}
-{{ partial "article" (dict "article" . "mode" $.Site.Params.frontpagemode) }}
+{{ partial "article" (dict "article" . "mode" (default "summary" (default $.Site.Params.listmode $.Site.Params.frontpagemode))) }}
 {{ end }}
 {{ partial "pagination" . }}
 		</main>

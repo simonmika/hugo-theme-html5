@@ -1,0 +1,6 @@
+{{ partial "article/part/header" . }}
+{{ partial "article/part/aside" . }}
+{{ range first (default 3 .Params.count) (where .Site.Pages "Section" .Params.section) }}
+{{ partial "article" (dict "article" . "mode" (default "summary" (default $.Site.Params.listmode (default $.Site.Params.sublistmode $.Params.childmode)))) }}
+{{ end }}
+{{ partial "article/part/footer" . }}

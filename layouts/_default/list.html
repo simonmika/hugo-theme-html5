@@ -1,7 +1,7 @@
 {{ define "main" }}
 		<main class="list">
 {{ range .Data.Paginator.Pages}}
-{{ partial "article" (dict "article" . "mode" $.Site.Params.listmode) }}
+{{ partial "article" (dict "article" . "mode" (default "summary" $.Site.Params.listmode)) }}
 {{ end }}
 {{ partial "pagination" . }}
 		</main>
