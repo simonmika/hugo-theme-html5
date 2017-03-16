@@ -1,3 +1,9 @@
 				<main>
-					{{ .Content }}
+					{{ if eq .Params.format "html" }}
+						{{ .RawContent | safeHTML }}
+					{{ else if eq .Params.format "plain" }}
+						{{ .RawContent | htmlEscape }}
+					{{ else }}
+						{{ .Content }}
+					{{ end}}
 				</main>
