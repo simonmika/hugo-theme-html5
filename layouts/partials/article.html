@@ -1,4 +1,5 @@
-{{ $mode := default .mode (index .article.Params "mode" )}}
+{{ $m := index .article.Params "mode" | default .mode }}
+{{ $mode := default $m (index (index .article.Params "modes" | default (dict $m $m)) $m) }}
 {{ $path := $mode | printf "article/mode/%s" }}
 			<article id="{{ .article.LinkTitle | urlize | lower }}" class="mode-{{ $mode }}{{ if isset .article.Params "class" }} {{ .article.Params.class }}{{ end }}"{{ if isset .article.Params "style" }} style="{{ .article.Params.style | safeCSS }}"{{ end }}>
 {{ partial $path .article }}
