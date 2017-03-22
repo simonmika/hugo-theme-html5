@@ -3,4 +3,5 @@
 {{ $path := $mode | printf "article/mode/%s" }}
 			<article id="{{ .article.LinkTitle | urlize | lower }}" class="mode-{{ $mode }}{{ if isset .article.Params "class" }} {{ .article.Params.class }}{{ end }}"{{ if isset .article.Params "style" }} style="{{ .article.Params.style | safeCSS }}"{{ end }}>
 {{ partial $path .article }}
+{{ partial "link.html" .article }}
 			</article>
