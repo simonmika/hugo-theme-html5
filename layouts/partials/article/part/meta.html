@@ -4,7 +4,7 @@
 				<span class='article-length'>{{ .FuzzyWordCount }} words</span>
 				<span class='article-reading-time'>{{ .ReadingTime }} minutes</span>
 {{ end }}
-{{ if default true (index .Params "author") }}
-<span class='article-author'><a href="/author/{{ .Params.author | urlize }}">{{ .Params.author }}</a></span>
+{{ if isset .Params "author" }}
+<span class='article-author'><a href="/author/{{ urlize .Params.author }}">{{ .Params.author }}</a></span>
 {{ end }}
 </p>
