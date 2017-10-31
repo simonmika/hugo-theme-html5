@@ -1,9 +1,7 @@
 {{ define "main" }}
 		<main class="list">
-{{ range .Paginator.Pages }}
-{{ if or .Site.BuildDrafts (le .Date now) }}
+{{ range (where .Paginator.Pages "Date" "<=" now) }}
 {{ partial "article" (dict "article" . "mode" (default "summary" $.Site.Params.listmode)) }}
-{{ end }}
 {{ end }}
 {{ partial "pagination" . }}
 		</main>
