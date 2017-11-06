@@ -7,4 +7,7 @@
 {{ if isset .Params "author" }}
 <span class='article-author'><a href="/author/{{ urlize .Params.author }}">{{ .Params.author }}</a></span>
 {{ end }}
+{{ if isset .Params "publication" }}
+<span class='article-publication'>{{ .Params.publication }}</span>
+{{ end }}
 </p>

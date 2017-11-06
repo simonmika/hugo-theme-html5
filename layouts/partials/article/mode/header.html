@@ -1,3 +1,5 @@
 {{ partial "article/part/header" . }}
 {{ partial "article/part/aside" . }}
+{{ if not (isset .Params "link") }}
 {{ partial "self-link.html" . }}
+{{ end }}
