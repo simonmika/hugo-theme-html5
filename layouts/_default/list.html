@@ -1,5 +1,9 @@
 {{ define "main" }}
-		<main class="list">
+{{ $mainClass := cond (ne (countwords .Content) 0) "list intro" "list" }}
+		<main class="{{ $mainClass }}">
+{{ if .Content }}
+	{{ partial "article" (dict "article" . "mode" "full") }}
+{{ end }}
 {{ range (where .Paginator.Pages "Date" "<=" now) }}
 {{ partial "article" (dict "article" . "mode" (default "summary" $.Site.Params.listmode)) }}
 {{ end }}
