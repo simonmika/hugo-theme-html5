@@ -6,6 +6,7 @@
 {{ partial "header.html" . }}
 {{ if .Site.Params.navigationinheader }}
 		<nav>
+{{ partial "nav-toggle.html" . }}
 {{ partial "menu.html" (dict "node" . "menu" .Site.Menus.main) }}
 {{ partial "nav-local.html" . }}
 		</nav>
@@ -14,6 +15,7 @@
 {{ if .Site.Params.navigationinheader }}
 {{ else }}
 		<nav>
+{{ partial "nav-toggle.html" . }}
 {{ partial "menu.html" (dict "node" . "menu" .Site.Menus.main) }}
 {{ partial "nav-local.html" . }}
 		</nav>
