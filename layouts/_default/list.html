@@ -4,8 +4,9 @@
 {{ if .Content }}
 	{{ partial "article" (dict "article" . "mode" "full") }}
 {{ end }}
-{{ range where (where .Paginator.Pages "Date" "<=" now) "Params.hidden" "!=" "true" }}
-{{ partial "article" (dict "article" . "mode" (default "summary" $.Site.Params.listmode)) }}
+{{ $paginator := .Paginate (where (where .Pages  "Date" "<=" now) "Params.hidden" "!=" "true") }}
+{{ range $paginator.Pages }}
+	{{ partial "article" (dict "article" . "mode" (default "summary" $.Site.Params.listmode)) }}
 {{ end }}
 {{ partial "pagination" . }}
 		</main>
