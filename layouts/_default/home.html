@@ -1,6 +1,6 @@
 {{ define "main" }}
 		<main class="list">
-{{ $paginator := .Paginate (where (where .Pages "Section" .Site.Params.frontpagesection) "Date" "<=" now) }}
+{{ $paginator := .Paginate (where (where .Pages "Section" .Site.Params.frontpagesection) "Date" "<=" now) (default (default $.Site.Params.frontpagepaginationcount $.Site.Params.paginationcount) 100) }}
 {{ range $paginator.Pages }}
 {{ partial "article" (dict "article" . "mode" (default "summary" (default $.Site.Params.listmode $.Site.Params.frontpagemode))) }}
 {{ end }}
