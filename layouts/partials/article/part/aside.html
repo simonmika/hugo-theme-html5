@@ -1,1 +1,1 @@
-{{ with .Params.image }}<aside><img src="{{ . }}" /></aside>{{ end }}
+{{ if .Params.image }}<aside><img src="{{ .Params.image }}" title=".Title" alt=".Summary" /></aside>{{ end }}
