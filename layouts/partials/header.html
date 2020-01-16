@@ -1,7 +1,7 @@
 	<h1>
-		<a href="{{ .Site.BaseURL }}./">
+		<a href="{{ .Site.BaseURL }}">
 			{{ if .Site.Params.logotype }}
-			<img src="{{ .Site.BaseURL }}{{ .Site.Params.logotype }}" alt="{{ .Title }}{{ with .Site.Params.tagline }} &middot; {{ . }}{{ end }}" />
+			<img src="{{ .Site.Params.logotype | absURL }}" alt="{{ .Title }}{{ with .Site.Params.tagline }} &middot; {{ . }}{{ end }}" />
 			{{ else }}
 			{{ .Site.Title }}
 			{{ end }}
