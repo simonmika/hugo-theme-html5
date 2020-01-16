@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html{{ with .Site.Params.Prefix }} prefix="{{ range . }}{{ . }} {{ end }}"{{ end }}{{ if .IsHome }} class="home"{{ end }}>
+<html{{ with .Site.Params.Prefix }} prefix="{{ range . }}{{ . }} {{ end }}"{{ end }}{{ if .IsHome }} class="home"{{ end }} {{ with .Language.Lang }}lang="{{ . }}"{{ end }}>
 {{ partial "head.html" . }}
 	<body>
 		<header>
