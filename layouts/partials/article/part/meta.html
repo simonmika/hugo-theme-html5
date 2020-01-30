@@ -1,14 +1,14 @@
-			<p>
-				{{ if not (eq (.Date.Format "2006-01-02") "0001-01-01") }}<time>{{ .Date.Format "2006-01-02" }}</time>{{ end }}
+<p>
+{{ if not (eq (.Date.Format "2006-01-02") "0001-01-01") }}<time>{{ .Date.Format "2006-01-02" }}</time>{{ end }}
 {{ if default true (index .Site.Params "showwordcount") }}
-				<span class='article-length'>{{ .FuzzyWordCount }} words</span>
-				<span class='article-reading-time'>{{ .ReadingTime }} minutes</span>
+	<span class='article-length'>{{ .FuzzyWordCount }} words</span>
+	<span class='article-reading-time'>{{ .ReadingTime }} minutes</span>
 {{ end }}
 {{ if isset .Params "author" }}
-<span class='article-author'><a href="/author/{{ urlize .Params.author }}">{{ .Params.author }}</a></span>
+	<span class='article-author'><a href="/author/{{ urlize .Params.author }}">{{ .Params.author }}</a></span>
 {{ end }}
 {{ if isset .Params "publication" }}
-<span class='article-publication'>{{ .Params.publication }}</span>
+	<span class='article-publication'>{{ .Params.publication }}</span>
 {{ end }}
 {{ partial "article/part/meta-local.html" . }}
 </p>
